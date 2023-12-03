@@ -88,7 +88,6 @@ require("lazy").setup {
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-    cond = firenvim_not_active,
     config = function()
       require("config.statusline")
     end,
@@ -97,7 +96,6 @@ require("lazy").setup {
   {
     "akinsho/bufferline.nvim",
     event = { "BufEnter" },
-    cond = firenvim_not_active,
     config = function()
       require("config.bufferline")
     end,
@@ -171,6 +169,13 @@ require("lazy").setup {
 
   {
     'wesleimp/stylua.nvim'
+  },
+
+  {
+    'Mofiqul/vscode.nvim',
+    config = function()
+      require("vscode").load()
+    end,
   },
 
 }
