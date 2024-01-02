@@ -109,4 +109,5 @@ set diffopt+=linematch:60
 set nowrap
 set noruler
 
-
+" Neoformat
+let g:neoformat_try_node_exe = 1
