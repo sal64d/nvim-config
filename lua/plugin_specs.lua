@@ -42,6 +42,18 @@ require("lazy").setup {
   },
 
   {
+    "MunifTanjim/eslint.nvim",
+    event = {"BufRead", "BufNewFile"},
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'jose-elias-alvarez/null-ls.nvim',
+    },
+    config = function ()
+      require("config.eslint")
+    end,
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
     build = ":TSUpdate",
